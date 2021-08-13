@@ -1,22 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import handlers from './mocks/handlers';
-import Characters from './components/Character';
+import Character from './components/Character';
+import axios from 'axios';
 
+  const App = () => {
 
-const App = () => {
-
-  const [SwData, setSwData] = useState({})
+  const [SwData, setSwData] = useState([])
   const [error, setError] = useState(null)
 
 useEffect(() => {
-  axios.get(`${BASE_URL}/apod?api_key=${API_KEY}`)//external server request
+  axios.get('https://swapi.dev/api/people')
     .then(res => {
       console.log(res.data)
       setSwData(res.data);
     })
-    .catch(err => {
-      console.error(err);
+    .catch(error => {
+      console.error(error);
       setError("Sorry, the force is not with you!");
     })
 }, [])
@@ -30,7 +29,7 @@ useEffect(() => {
   return (
     <div className="App">
       <h1 className="Header">Star Wars Major Characters List</h1>
-      <Characters name={SwData.name} height={SwData.height} mass={SwData.mass} hair_color={SwData.hair_color} skin_color={SwData.skin_color} eye_color={SwData.eye.eye_color} birth_year={SwData.birth_year} gender={SwData.gender} />
+      <Character name={SwData.name} height={SwData.height} mass={SwData.mass} hair_color={SwData.hair_color} skin_color={SwData.skin_color} eye_color={SwData.eye_color} birth_year={SwData.birth_year} gender={SwData.gender} />
     </div>
   );
 }

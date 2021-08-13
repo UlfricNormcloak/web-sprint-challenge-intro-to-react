@@ -1,18 +1,21 @@
 // Write your Character component here
 import React from 'react'
-import styled from 'styled-components'
+//import styled from 'styled-components'
 
-const StyledCharacters = styled.div`
-    color: ${(pr) => pr.theme.secondaryColor};
-    `
+// const StyledCharacter = styled.p`
+//     color: ${(pr) => pr.theme.secondaryColor};
+//     `
 
-function Characters(props) {
+function Character(props) {
+
+    const { data } = props;
+
     return (
-        <StyledCharacters>
-          <p>{props.characters}</p>
-        </StyledCharacters>
+        <div>
+          <p>{ data }</p>
+        </div>
     )
 
 }
 
-export default Characters
+export default Character
