@@ -12,11 +12,11 @@ You are not allowed to collaborate during the sprint challenge.
 
 ## Project Set Up
 
-- [ ] Fork and clone the repo. Delete your old fork from Github first if you are repeating this Unit.
-- [ ] Open the assignment in Canvas and click on the "Set up git" option.
-- [ ] Follow instructions to set up Codegrade's Webhook and Deploy Key.
-- [ ] Push your first commit: `git commit --allow-empty -m "first commit" && git push`.
-- [ ] Check to see that Codegrade has accepted your git submission.
+- [X] Fork and clone the repo. Delete your old fork from Github first if you are repeating this Unit.
+- [X] Open the assignment in Canvas and click on the "Set up git" option.
+- [X] Follow instructions to set up Codegrade's Webhook and Deploy Key.
+- [X] Push your first commit: `git commit --allow-empty -m "first commit" && git push`.
+- [X] Check to see that Codegrade has accepted your git submission.
 
 For a step-by-step on setting up Codegrade see [this guide.](https://www.notion.so/lambdaschool/Submitting-an-assignment-via-Code-Grade-A-Step-by-Step-Walkthrough-07bd65f5f8364e709ecb5064735ce374)
 
@@ -69,18 +69,30 @@ After finishing your required elements, you can push your work further. These go
 
 ## Submission format
 
-- [ ] Submit via Codegrade by committing and pushing any new changes.
-- [ ] Create a pull request to merge `<firstName-lastName>` branch into `main`.
-- [ ] Please don't merge your own pull request and make sure **you are on your own repo**.
-- [ ] Check Codegrade for automated feedback.
-- [ ] Check Codegrade in the days following the Sprint Challenge for reviewer feedback.
-- [ ] Any changes pushed after the deadline will not receive any feedback.
+- [X] Submit via Codegrade by committing and pushing any new changes.
+- [X] Create a pull request to merge `<firstName-lastName>` branch into `main`.
+- [X] Please don't merge your own pull request and make sure **you are on your own repo**.
+- [X] Check Codegrade for automated feedback.
+- [X] Check Codegrade in the days following the Sprint Challenge for reviewer feedback.
+- [X] Any changes pushed after the deadline will not receive any feedback.
 
 ## Interview Questions
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+
+Answer: React JS is a user interface component library used to build out user interfaces. React uses a structure based on the use of components which are separate files that communicate with the main component file (usually call 'App' in our project). The problem that it is design to attempt to address is the management of complex state, where state changes rapidly based on significant numbers of user interactions. The DOM itself is hard to manage and a rapidly changing DOM is hard to manage. React uses what is called a virtualDOM that captures changes to state, and pushes those changes to the actual DOM in terms of updates to what is rendered. React improves efficiency because it manages specific changes in state, only updating the specific nodes on the actual DOM that need to be updated. Another advantage to React is that the component portions of code make it easier to manage change to the components themselves, and makes debugging easier. In both cases it is easier because of the fact that it is easier to review, change, and manage small portions of code in a component file, rather than one huge file with hundreds or thousands of lines of code in one place.
+
 1. Describe component state.
+
+Answer: Component state is the heart of the component in the sense that it is the portion of the component that determines how the component behaves with changes in data/state data. The component will have an initial use state, set with the use of the declaration of the state variable, setter function(used for changes in state), and useState(), which is where the initial value is defined for initial state.
+
 1. Describe props.
+
+Answer: Props are used to dynamically populate and update the state of a component. Props are defined within the parent component and are passed to the child component, and props cannot be passed from child to parent.
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+Answer: A side effect is anything in the code that affects another thing that is outside of the fucntion being executed. Changes ot the DOM or pulling data from an API are examples of this. Syncing side effects can be accomplished using changes to state and props. This is accomplished using an effect hook, and the effect hook can be programmed to sync/fire with initial mounting of the component only, or with changes to certain states and props, or in response to all state and props changes.
+
