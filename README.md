@@ -38,7 +38,7 @@ Your finished project must include all of the following requirements:
 
 - [X] Use the endpoint `[GET] https://swapi.dev/api/people` (mocked in [msw](https://github.com/mswjs/msw)) to obtain characters.
 - [X] Set the list of characters into state.
-- [ ] Render your characters to the DOM:
+- [X] Render your characters to the DOM:
 
   1. Build a React component named 'Character' to render an individual character.
   1. Map over the list in state, and for each character render a Character to the page.
