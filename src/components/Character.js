@@ -1,19 +1,21 @@
 // Write your Character component here
 import React from 'react'
-//import styled from 'styled-components'
+import styled from 'styled-components'
 
-// const StyledCharacter = styled.p`
-//     color: ${(pr) => pr.theme.secondaryColor};
-//     `
+const StyledCharacter = styled.div`
+    color: ${(pr) => pr.theme.secondaryColor};
+    padding: 20px;
+    font-size: 48px;
+    `
 
 function Character(props) {
 
-    const { data } = props;
+    const { name } = props;
 
     return (
-        <div>
-          <p>{ data }</p>
-        </div>
+        <StyledCharacter>
+            <div>{ name }</div>
+        </StyledCharacter>
     )
 
 }
